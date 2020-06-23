@@ -1,0 +1,17 @@
+{
+  "main_menu" : {
+    "Sports" : "Sports",
+    "My Store": "My Store",
+    "My Orders": "My Orders",
+    "Sign In": "Sign In",
+    "Sign Up": "Sign Up",
+    "Offices": "Offices"
+  },
+  "side_menu" : {
+    "T Shirt": "T Shirt",
+    "Shoes": "Shoes",
+    "Fleece": "Fleece",
+    "Trousers": "Trousers",
+    "Shorts": "Shorts"
+  } 
+}
