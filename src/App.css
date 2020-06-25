@@ -47,10 +47,10 @@ body {
 .sub-menu-list li a {
   color: #ffffff;
   text-decoration: none;
+  padding: 5px;
 }
 
-.sub-menu-list li a.active {
+.sub-menu-list li.active, .sub-menu-list li.active a {
   background-color: #ffffff;
   color: #282c34;
-  padding: 5px;
 }

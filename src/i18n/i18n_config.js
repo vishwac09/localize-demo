@@ -17,15 +17,14 @@ const resources = {
   },
 };
 
-function initialize_i18n(langCode = 'en') {
-  return i18n.use(initReactI18next).init({
-    resources,
-    fallbackLng: 'en',
-    lng: langCode,
-    interpolation: {
-      escapeValue: false,
-    },
-  });
-}
+i18n.use(initReactI18next).init({
+  resources,
+  fallbackLng: 'en',
+  lng: 'en',
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
-export {initialize_i18n};
+
+export default i18n;

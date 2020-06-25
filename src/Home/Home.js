@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Trans, useTranslation} from 'react-i18next';
+import i18n from '../i18n/i18n_config';
 
-function Home(props) {
+function Home() {
+  // maintain list of languages we are supporting
+  // Todo move it in global config
+  const supported_languages = {
+    en: 'English',
+    fr: 'French',
+    de: 'German'
+  };
   const {t} = useTranslation();
+  const [active_lang, set_lang] = useState('en');
   const change_language = (event, lang_code) => {
     event.preventDefault();
-    console.log(event);
-    props.set_lang(lang_code);
+    set_lang(lang_code);
+    i18n.changeLanguage(lang_code);
   }
   return (
     <div className="home">
@@ -22,9 +31,14 @@ function Home(props) {
       </div>
       <div className="brick-10 sub-menu">
         <ul className="sub-menu-list">
-          <li><a onClick={(e) => change_language(e, 'en')} href="#en">English</a></li>
-          <li><a class="active" onClick={(e) => change_language(e, 'fr')} href="#fr">French</a></li>
-          <li><a onClick={(e) => change_language(e, 'de')} href="#de">German</a></li>
+          {
+            Object.keys(supported_languages).map(lang_code => {
+              return <li className={active_lang === lang_code ? 'active' : 'not-active'} 
+                          onClick={(e) => change_language(e, lang_code)} key={lang_code}>
+                  <a href={lang_code}>{supported_languages[lang_code]}</a>
+                </li>;
+            })
+          }
         </ul>
       </div>
       <div className="brick-10">
