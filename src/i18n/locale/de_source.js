@@ -1,4 +1,4 @@
-var de = {
+const de_source = {
   main_menu: {
     sports: "Sport",
     my_store: "Mein Geschäft",
@@ -16,4 +16,4 @@ var de = {
   }
 };
 
-export {de};
+export {de_source};

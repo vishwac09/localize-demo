@@ -1,4 +1,4 @@
-const en = {
+const en_source = {
   main_menu: {
     sports: "Sports",
     my_store: "My Store",
@@ -16,4 +16,4 @@ const en = {
   }
 };
 
-export {en};
+export {en_source};

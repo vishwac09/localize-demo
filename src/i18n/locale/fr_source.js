@@ -1,4 +1,4 @@
-const fr = {
+const fr_source = {
   main_menu: {
     sports: "Sports",
     my_store: "Mon magasin",
@@ -16,4 +16,4 @@ const fr = {
   }
 };
 
-export {fr};
+export {fr_source};
