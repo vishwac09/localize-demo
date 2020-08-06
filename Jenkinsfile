@@ -15,6 +15,7 @@ pipeline {
         }
         steps {
           echo 'Building..'
+          sh 'source ~/.bashrc'
           sh 'env'
           sh '''
           echo env
