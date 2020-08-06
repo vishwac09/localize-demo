@@ -24,10 +24,10 @@ pipeline {
           }
         post {
           success {
-            sendNotifications("SUCCESS","","React Development Build")
+            echo "Done building";
           }
           failure {
-            sendNotifications("ERROR","","React Development Build")
+            echo "Failed Building building";
           }
         }
       }
