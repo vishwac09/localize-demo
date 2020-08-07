@@ -15,6 +15,7 @@ pipeline {
         }
         steps {
           echo 'Building..'
+          sh 'yarn config delete proxy;'
           sh 'env'
           sh '''
           echo env
